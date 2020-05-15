@@ -1,0 +1,16 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+#move_to_right{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.imagepad{
+    padding-left: 40px;
+}
+.move_to_left{
+    padding: 80px;
+    margin: 82.5px;
+}

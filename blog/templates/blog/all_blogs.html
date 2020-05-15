@@ -1,0 +1,12 @@
+    {% extends 'portfolio/base.html' %}
+    {% block content %}
+
+<div class = 'move_to_left'> 
+{{blogs.count}} blog{{blogs.count|pluralize}} here
+{% for blog in blogs%}
+<h2><a href = '{% url 'blog:detail' blog.id%}'>{{blog.title}}</a></h2>
+<p>{{blog.description|striptags|truncatechars:100}}</p>
+<p>{{blog.date|date:'M d Y'|upper }}</p>
+{% endfor%}
+</div>
+{% endblock %}

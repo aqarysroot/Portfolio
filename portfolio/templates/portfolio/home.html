@@ -1,0 +1,63 @@
+
+    {% extends 'portfolio/base.html' %}
+
+    {% block content %}
+ {% load static %}
+    <h1 class = "move_to_left" > Akarys' porfolio</h1>
+    
+    <div class ="container-fluid">
+    <div class = "row">
+    <div class="col">
+   <img class="imagepad" src = "{% static 'portfolio/photo_2020-04-02_17-14-31.jpg' %}" height = 400 width = 300>
+    </div>
+    <div class="col">
+<ol>
+<li>I am passionate about my work.</li>
+<li>I am ambitious and driven.</li>
+<li>I am results-oriented.</li>
+<li>I am an excellent communicator.</li>
+</ol>
+    </div>
+    </div>
+    
+    <br>
+    <div class = 'text-center'>
+    
+
+          
+         <h2> My Skills</h2>
+  <br>
+  <div class="container">
+  <div class="row row-cols-1 row-cols-md-3 ">
+    
+
+
+    {% for project in projects%}
+    <div class="col">
+    <h3 class = "bg-info">{{project.title}}</h3>
+   
+    <img class = ""src = '{{project.image.url}}' height = 300 width = 300>
+        
+        {%if project.url%}
+        <a href = "{{project.url}}">Link </a>
+        {% endif %}
+
+
+    <p>{{project.description}}</p>
+      
+      </div>
+      {% endfor%}
+    
+    </div>
+       </div> 
+
+
+
+    </div>
+
+
+  
+    {% endblock %}
+
+
+

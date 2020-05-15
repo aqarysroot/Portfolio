@@ -1,0 +1,9 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class='move_to_left'>
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.date|date:'F jS Y'}}</p>
+    <p>{{blog.description|safe}}<p>
+</div>
+{% endblock %}
